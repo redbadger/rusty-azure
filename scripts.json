@@ -1,0 +1,14 @@
+{
+  "tsconfig": "tsconfig.json",
+  "allow": ["all"],
+  "scripts": {
+    "build": {
+      "cmd": [
+        "rm -rf build",
+        "mkdir build",
+        "deno bundle src/mod.ts build/index.js"
+      ],
+      "log": "debug"
+    }
+  }
+}
