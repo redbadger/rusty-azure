@@ -1,6 +1,6 @@
 import React from 'react';
 
-const dialog = [
+const conversation = [
   { person: 'pedro', component: () => <p>Hello there.</p> },
 
   { person: 'audience-member', component: () => <p>Hi.</p> },
@@ -9,9 +9,7 @@ const dialog = [
   {
     person: 'pedro',
     component: () => (
-      <p>
-        I audience-member the Web developer at Red Badger with the dodgy accent.
-      </p>
+      <p>I am the Web developer at Red Badger with the dodgy accent.</p>
     ),
   },
   {
@@ -369,4 +367,4 @@ const dialog = [
   },
 ];
 
-export default dialog;
+export default conversation;
