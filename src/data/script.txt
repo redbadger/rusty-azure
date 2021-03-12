@@ -1,0 +1,98 @@
+PM: Hello there.
+  
+AM: Hi.
+AM: Who are you?
+
+PM: I am the Web developer at  Red Badger with the dodgy accent.
+AM: You all sound a bit dodgy to me.
+AM: Ok. What do you want?
+
+PM: Look, I need to deliver a lightning talk about how a bit of code that we did for a client was adopted by Microsoft Azure.
+AM: Ok. So that sounds like you want to show off.
+PM: Mmm, well, I think you might be right.
+
+AM: Cool, so what do you need from me?
+PM: Just listen and tell me what you think about how I am telling the story.
+AM: All right. Shoot.
+
+PM: Thanks.
+PM: Last year, just before the pandemic started, I was part of the team working at MHRA.
+
+AM: and what does MHRA stand for?
+AM:  Medical Hair Restoration Australia?
+AM: Michigan Hot Rod Association?
+
+PM: No,  Medicines & Healthcare products Regulatory Agency.
+AM: Ok, and what do they do?
+
+PM: They are an agency under the UK Department of Health, responsible for licencing medicines and healthcare products.
+AM: Like approving coronavirus vaccines? 
+PM: Yeap
+AM: So that’s where I’ve heard of them!
+PM: The work we were doing was to replace an old Web application that provides members of the public with information about all the medicines that are sold in the UK. 
+PM: Imagine that you are buying ibuprofen from Tesco and when you open the box you find a leaflet with information about active substances, side effects, etc.
+AM: Got it.
+
+PM: Part of our work was to connect 4 microservices built with Rust to Microsoft Azure service bus.
+AM: Ok, when is the exciting part coming?
+PM: please, bear with, I promise I will deliver a big bang.
+AM: ... Ok.
+
+PM: So, at that time Azure had no official client or SDK for Rust, so we tried to make our integrations using simple HTTP requests to the Azure API with Shared Access Signatures (SAS).
+AM: What the f… is SAS?
+
+PM: Shared Access Signatures are keys that can be used by a 3rd party to access a specific resource. In general, the SAS key is included in the URL that is used to access the resource. 
+AM: Sorry, I did not understand anything you just said.
+PM: I blame my accent.
+
+PM: Imagine that you are going to a secret party  during lockdown and the bouncer is asking you to give her a passcode, this passcode can be overheard and used by another person. Now imagine that the passcode contains encrypted details of who you are and has an expiry time. Now if another person tries to use it the bouncer can verify if that person is really you.
+
+AM: Oh wow, that sounds very secure.
+
+PM: Well, yes, but it’s a pain to create a SAS by scratch, so I asked a more experienced developer to pair with me and we couldn’t make it. Then we called our technical lead to help us…. and we had the same result.
+
+AM: Well, why didn’t you follow the Azure documentation?
+
+
+PM: Well, we did, but it’s not great. So we looked on GitHub to see if someone had implemented it already on Rust.
+
+AM: And…?
+
+PM: We found the work of  Francesco Cogno, a Microsoft software developer and a Rust enthusiast, that was starting with an unofficial Azure SDK for Rust and he had implemented Shared Access Signatures.
+
+AM: Nice, so you just copy-pasted their work into your project?
+
+PM: That is open source programming in a nutshell baby!
+PM: But yes, kind of.
+
+PM: In Rust land we can import dependencies by just declaring the repository URL and we can even target a specific branch.
+
+AM: No way, REALLY!
+
+PM: Yeah, it’s f****ing cool!
+
+PM: So we forked his repo and started to extend his library to plug into Service Bus. And a week later, he and his team started to do the same thing.
+
+AM: Really...mmm, what  a coincidence?!
+
+PM: Yeah, I couldn't believe our luck too.
+
+PM: So, we reached out to him and he was quite excited that his library was being used in a real project. We suggested that we could make a pull request from our fork and if his team were happy, they could integrate it. They did it. We finished the project and then we forgot about it.
+
+AM: Ok, that is the most anti-climactic way to finish your talk.
+
+PM: I know, but there is more.
+
+AM: Ok, I am running out of time, could you make it brief please?
+
+PM: So, In December 2020, Microsoft Azure GitHub organisation adopted Francesco’s work as part of their organisation. https://github.com/Azure/azure-sdk-for-rust  And now our small contribution is part of the Microsoft Azure SDK for Rust. 
+
+AM: That is still not a big bang, but it is cool.
+AM: So is this talk to showing off
+
+PM: Well, yes a bit.
+PM: Do you have any feedback for the talk?
+
+AM: You can say to them: that as part of your client facing work you contributed to a non-official open source project that was later adopted by Microsoft and then you will save them 5 mins of their time.
+
+PM: Yeah, probably I would just do that. Thanks for your time, random audience member
