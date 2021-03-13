@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { navigateForward } from '../app/features/chat-navigation';
+import {
+  navigateForward,
+  navigateBackward,
+} from '../app/features/chat-navigation';
 import Conversation from '../components/conversation';
 
 const StyledMain = styled.main`
@@ -18,6 +21,12 @@ const StyledMain = styled.main`
   }
 `;
 
+const shouldNavigateForward = (key: string): boolean =>
+  key === 'ArrowRight' || key === 'ArrowDown';
+
+const shouldNavigateBackward = (key: string): boolean =>
+  key === 'ArrowLeft' || key === 'ArrowUp';
+
 const PresentationPage: React.FC = () => {
   const dispatch = useDispatch();
 
@@ -25,8 +34,10 @@ const PresentationPage: React.FC = () => {
     const { key } = event;
 
     if (key) {
-      if (key === 'ArrowRight') {
+      if (shouldNavigateForward(key)) {
         dispatch(navigateForward());
+      } else if (shouldNavigateBackward(key)) {
+        dispatch(navigateBackward());
       }
     }
   };

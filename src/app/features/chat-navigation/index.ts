@@ -18,10 +18,16 @@ export const chatNavigationSlice = createSlice({
       state.index =
         state.index < conversation.length ? (state.index += 1) : state.index;
     },
+    navigateBackward: (state) => {
+      state.index = state.index > 0 ? (state.index -= 1) : 0;
+    },
   },
 });
 
-export const { navigateForward } = chatNavigationSlice.actions;
+export const {
+  navigateForward,
+  navigateBackward,
+} = chatNavigationSlice.actions;
 
 export const selectChatNavigation = (state: RootState) => state.chatNavigation;
 
