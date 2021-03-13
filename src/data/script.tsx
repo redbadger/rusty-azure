@@ -1,6 +1,11 @@
 import React from 'react';
 
-const conversation = [
+export interface IMessage {
+  person: 'pedro' | 'audience-member' | string;
+  component: () => JSX.Element;
+}
+
+const conversation: IMessage[] = [
   { person: 'pedro', component: () => <p>Hello there.</p> },
 
   { person: 'audience-member', component: () => <p>Hi.</p> },
