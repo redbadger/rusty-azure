@@ -9,6 +9,10 @@ const StyledDiv = styled.div`
   margin-bottom: 5px;
   position: relative;
 
+  p {
+    margin: 0;
+  }
+
   &.yours {
     margin-right: 25%;
     background-color: #eee;

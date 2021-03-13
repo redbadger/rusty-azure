@@ -61,8 +61,8 @@ const conversation: IMessage[] = [
     person: 'pedro',
     component: () => (
       <p>
-        Last year, just before the pandemic started, I was part of the
-        teaudience-member working at MHRA.
+        Last year, just before the pandemic started, I was part of the team
+        working at MHRA.
       </p>
     ),
   },
@@ -115,7 +115,7 @@ const conversation: IMessage[] = [
       <p>
         The work we were doing was to replace an old Web application that
         provides members of the public with information about all the medicines
-        that are sold in the UK.{' '}
+        that are sold in the UK.
       </p>
     ),
   },
@@ -170,7 +170,7 @@ const conversation: IMessage[] = [
       <p>
         Shared Access Signatures are keys that can be used by a 3rd party to
         access a specific resource. In general, the SAS key is included in the
-        URL that is used to access the resource.{' '}
+        URL that is used to access the resource.
       </p>
     ),
   },
@@ -178,7 +178,7 @@ const conversation: IMessage[] = [
     person: 'audience-member',
     component: () => <p>Sorry, I did not understand anything you just said.</p>,
   },
-  { person: 'pedro', component: () => <p>I blaudience-membere my accent.</p> },
+  { person: 'pedro', component: () => <p>I blame my accent.</p> },
 
   {
     person: 'pedro',
@@ -205,8 +205,7 @@ const conversation: IMessage[] = [
       <p>
         Well, yes, but it’s a pain to create a SAS by scratch, so I asked a more
         experienced developer to pair with me and we couldn’t make it. Then we
-        called our technical lead to help us…. and we had the saudience-membere
-        result.
+        called our technical lead to help us…. and we had the same result.
       </p>
     ),
   },
@@ -250,9 +249,7 @@ const conversation: IMessage[] = [
 
   {
     person: 'pedro',
-    component: () => (
-      <p>That is open source prograudience-memberming in a nutshell baby!</p>
-    ),
+    component: () => <p>That is open source programming in a nutshell baby!</p>,
   },
   { person: 'pedro', component: () => <p>But yes, kind of.</p> },
 
@@ -275,8 +272,8 @@ const conversation: IMessage[] = [
     component: () => (
       <p>
         So we forked his repo and started to extend his library to plug into
-        Service Bus. And a week later, he and his teaudience-member started to
-        do the saudience-membere thing.
+        Service Bus. And a week later, he and his team started to do the same
+        thing.
       </p>
     ),
   },
@@ -297,9 +294,8 @@ const conversation: IMessage[] = [
       <p>
         So, we reached out to him and he was quite excited that his library was
         being used in a real project. We suggested that we could make a pull
-        request from our fork and if his teaudience-member were happy, they
-        could integrate it. They did it. We finished the project and then we
-        forgot about it.
+        request from our fork and if his team were happy, they could integrate
+        it. They did it. We finished the project and then we forgot about it.
       </p>
     ),
   },
@@ -316,10 +312,7 @@ const conversation: IMessage[] = [
   {
     person: 'audience-member',
     component: () => (
-      <p>
-        Ok, I audience-member running out of time, could you make it brief
-        please?
-      </p>
+      <p>Ok, I am running out of time, could you make it brief please?</p>
     ),
   },
 
@@ -330,7 +323,7 @@ const conversation: IMessage[] = [
         So, In December 2020, Microsoft Azure GitHub organisation adopted
         Francesco’s work as part of their organisation.
         https://github.com/Azure/azure-sdk-for-rust And now our small
-        contribution is part of the Microsoft Azure SDK for Rust.{' '}
+        contribution is part of the Microsoft Azure SDK for Rust.
       </p>
     ),
   },
