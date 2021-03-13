@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { IMessage } from '../data/script';
 
 const StyledDiv = styled.div`
   border-radius: 20px;
@@ -7,6 +8,10 @@ const StyledDiv = styled.div`
   margin-top: 5px;
   margin-bottom: 5px;
   position: relative;
+
+  p {
+    margin: 0;
+  }
 
   &.yours {
     margin-right: 25%;
@@ -71,20 +76,20 @@ const StyledDiv = styled.div`
   }
 `;
 
-interface MessageProps {
+interface MessageProps extends IMessage {
   person: 'pedro' | 'audience-member' | string;
   component: () => JSX.Element;
-  key: number;
+  id: number;
 }
 
 const Message: React.FC<MessageProps> = ({
   person,
   component: Component,
-  key,
+  id,
 }) => {
   const bubbleType = person === 'pedro' ? 'mine' : 'yours';
   return (
-    <StyledDiv className={bubbleType} key={key} id={`${key + 1}`}>
+    <StyledDiv className={bubbleType} id={`${id + 1}`}>
       <Component />
     </StyledDiv>
   );
