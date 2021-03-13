@@ -1,25 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Message from '../components/message';
-import { useDispatch, useSelector } from 'react-redux';
-import conversation from '../data/script';
-import {
-  selectChatNavigation,
-  navigateForward,
-} from '../app/features/chat-navigation';
-
-const Conversation = () => {
-  const { index } = useSelector(selectChatNavigation);
-  const [newConversation, setNewConversation] = useState([conversation[0]]);
-
-  useEffect(() => {
-    setNewConversation(conversation.slice(0, index));
-  }, [index]);
-
-  return newConversation.map(({ person, component }, key) => (
-    <Message key={key} person={person} component={component} id={key} />
-  ));
-};
+import { useDispatch } from 'react-redux';
+import { navigateForward } from '../app/features/chat-navigation';
+import Conversation from '../components/conversation';
 
 const StyledMain = styled.main`
   padding: 1.25rem;

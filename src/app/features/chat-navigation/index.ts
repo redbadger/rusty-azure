@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
+import conversation from '../../../data/script';
 
 interface ChatNavigationState {
-  pointer: number;
   index: number;
 }
 
 const initialState: ChatNavigationState = {
-  pointer: 1,
   index: 0,
 };
 
@@ -16,8 +15,8 @@ export const chatNavigationSlice = createSlice({
   initialState,
   reducers: {
     navigateForward: (state) => {
-      state.pointer += 1;
-      state.index += 1;
+      state.index =
+        state.index < conversation.length ? (state.index += 1) : state.index;
     },
   },
 });
