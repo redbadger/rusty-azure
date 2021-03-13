@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { navigateForward } from '../app/features/chat-navigation';
@@ -30,6 +30,13 @@ const PresentationPage: React.FC = () => {
       }
     }
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  });
 
   return (
     <StyledMain onKeyDown={handleOnKeyDown} tabIndex={0}>
