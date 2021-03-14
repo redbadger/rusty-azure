@@ -74,7 +74,6 @@ const StyledDiv = styled.div`
       border-bottom-left-radius: 10px;
     }
   }
-  /* Typing indicator */
 `;
 
 const StyledTypingIndicator = styled.div`
@@ -83,11 +82,10 @@ const StyledTypingIndicator = styled.div`
     will-change: transform;
     width: auto;
     border-radius: 50px;
-    padding: 20px;
+    padding: 15px;
     position: relative;
     animation: 2s bulge infinite ease-out;
-    display: flex;
-    max-width: 90px;
+    display: inline-flex;
   }
   & span {
     height: 15px;
@@ -118,44 +116,12 @@ const StyledTypingIndicator = styled.div`
       transform: scale(1.05);
     }
   }
-  &.yours &::before,
-  &.yours &::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: -2px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: #e6e7ed;
-  }
-  &.yours &::after {
-    height: 10px;
-    width: 10px;
-    left: -10px;
-    bottom: -10px;
-  }
 
+  &.yours {
+    align-self: start;
+  }
   &.mine {
     align-self: end;
-  }
-
-  &.mine &::before,
-  &.mine &::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    right: -2px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: #e6e7ed;
-  }
-  &.mine &::after {
-    height: 10px;
-    width: 10px;
-    right: -10px;
-    bottom: -10px;
   }
 `;
 
