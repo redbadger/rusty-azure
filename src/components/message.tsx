@@ -1,4 +1,4 @@
-import React, { useEffect, useTransition } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IMessage } from '../data/script';
 
@@ -131,43 +131,32 @@ interface MessageProps extends IMessage {
   id: number;
 }
 
-const SUSPENSE_CONFIG = { timeoutMs: 2000 };
-
 const Message: React.FC<MessageProps> = ({
   person,
   component: Component,
   id,
 }) => {
-  const [startTransition, isPending] = useTransition(SUSPENSE_CONFIG);
+  const [showMessage, setShowMessage] = useState(false);
 
   const bubbleType = person === 'pedro' ? 'mine' : 'yours';
 
   useEffect(() => {
-    startTransition();
-  }, [isPending]);
+    setTimeout(() => setShowMessage(true), 2000);
+  });
 
   return (
     <>
-      {isPending ? (
+      {showMessage ? (
+        <StyledDiv className={bubbleType} id={`${id + 1}`}>
+          <Component />
+        </StyledDiv>
+      ) : (
         <StyledTypingIndicator className={bubbleType}>
           <span></span>
           <span></span>
           <span></span>
         </StyledTypingIndicator>
-      ) : (
-        <StyledDiv className={bubbleType} id={`${id + 1}`}>
-          <Component />
-        </StyledDiv>
       )}
-
-      {/* <StyledTypingIndicator className={bubbleType}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </StyledTypingIndicator> */}
-      {/* <StyledDiv className={bubbleType} id={`${id + 1}`}>
-        <Component />
-      </StyledDiv> */}
     </>
   );
 };
