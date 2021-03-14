@@ -75,36 +75,36 @@ const StyledDiv = styled.div`
     }
   }
   /* Typing indicator */
+`;
 
-  .typing-indicator {
+const StyledTypingIndicator = styled.div`
+  & {
     background-color: #e6e7ed;
     will-change: transform;
     width: auto;
     border-radius: 50px;
     padding: 20px;
-    /* display: table;
-    margin: 0 auto; */
     position: relative;
     animation: 2s bulge infinite ease-out;
     display: flex;
+    max-width: 90px;
   }
-  .typing-indicator span {
+  & span {
     height: 15px;
     width: 15px;
-    /* float: left; */
     margin: 0 1px;
     background-color: #9e9ea1;
     display: block;
     border-radius: 50%;
     opacity: 0.4;
   }
-  .typing-indicator span:nth-of-type(1) {
+  & span:nth-of-type(1) {
     animation: 1s blink infinite 0.3333s;
   }
-  .typing-indicator span:nth-of-type(2) {
+  & span:nth-of-type(2) {
     animation: 1s blink infinite 0.6666s;
   }
-  .typing-indicator span:nth-of-type(3) {
+  & span:nth-of-type(3) {
     animation: 1s blink infinite 0.9999s;
   }
 
@@ -118,8 +118,8 @@ const StyledDiv = styled.div`
       transform: scale(1.05);
     }
   }
-  &.yours .typing-indicator::before,
-  &.yours .typing-indicator::after {
+  &.yours &::before,
+  &.yours &::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -129,15 +129,19 @@ const StyledDiv = styled.div`
     border-radius: 50%;
     background-color: #e6e7ed;
   }
-  &.yours .typing-indicator::after {
+  &.yours &::after {
     height: 10px;
     width: 10px;
     left: -10px;
     bottom: -10px;
   }
 
-  &.mine .typing-indicator::before,
-  &.mine .typing-indicator::after {
+  &.mine {
+    align-self: end;
+  }
+
+  &.mine &::before,
+  &.mine &::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -147,7 +151,7 @@ const StyledDiv = styled.div`
     border-radius: 50%;
     background-color: #e6e7ed;
   }
-  &.mine .typing-indicator::after {
+  &.mine &::after {
     height: 10px;
     width: 10px;
     right: -10px;
@@ -168,14 +172,16 @@ const Message: React.FC<MessageProps> = ({
 }) => {
   const bubbleType = person === 'pedro' ? 'mine' : 'yours';
   return (
-    <StyledDiv className={bubbleType} id={`${id + 1}`}>
-      <div className="typing-indicator">
+    <>
+      <StyledTypingIndicator className={bubbleType}>
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <Component />
-    </StyledDiv>
+      </StyledTypingIndicator>
+      <StyledDiv className={bubbleType} id={`${id + 1}`}>
+        <Component />
+      </StyledDiv>
+    </>
   );
 };
 
