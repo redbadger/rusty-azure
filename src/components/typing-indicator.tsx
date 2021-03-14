@@ -11,7 +11,7 @@ const StyledTypingIndicator = styled.div`
     will-change: transform;
     width: auto;
     border-radius: 50px;
-    padding: 15px;
+    padding: 8px 15px;
     position: relative;
     animation: 2s bulge infinite ease-out;
     display: inline-flex;
