@@ -18,6 +18,7 @@ const Routes = () => (
       <Route exact path="/" component={HomePage} />
       <Route exact path="/presentation" component={PresentationPage} />
       <Route exact path="/about" component={AboutPage} />
+      <Route exact path="/404" component={ErrorPage} />
       <Route path="/*" component={ErrorPage} />
     </Switch>
   </CustomBrowserRouter>
