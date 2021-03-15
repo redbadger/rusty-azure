@@ -7,6 +7,7 @@ import {
   resetNavigation,
 } from '../app/features/chat-navigation';
 import Chat from '../components/chat';
+import Modal from '../components/modal';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -38,9 +39,12 @@ const PresentationPage: React.FC = () => {
   };
 
   return (
-    <StyledMain onKeyDown={handleOnKeyDown} tabIndex={0}>
-      <Chat />
-    </StyledMain>
+    <>
+      <Modal />
+      <StyledMain onKeyDown={handleOnKeyDown} tabIndex={0}>
+        <Chat />
+      </StyledMain>
+    </>
   );
 };
 export default PresentationPage;
