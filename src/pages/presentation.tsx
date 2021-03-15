@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import {
   navigateForward,
   navigateBackward,
+  resetNavigation,
 } from '../app/features/chat-navigation';
 import Chat from '../components/chat';
 
@@ -19,6 +20,10 @@ const shouldNavigateBackward = (key: string): boolean =>
 
 const PresentationPage: React.FC = () => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(resetNavigation());
+  }, [dispatch]);
 
   const handleOnKeyDown = (event: React.KeyboardEvent) => {
     const { key } = event;
