@@ -49,8 +49,7 @@ const conversation: IMessage[] = [
     person: 'pedro',
     component: () => (
       <p>
-        Just listen and tell me what you think about how I audience-member
-        telling the story.
+        Just listen and tell me what you think about how I am telling the story.
       </p>
     ),
   },
