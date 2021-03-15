@@ -6,6 +6,8 @@ import {
   navigateBackward,
 } from '../app/features/chat-navigation';
 import Conversation from '../components/conversation';
+import { Link } from 'react-router-dom';
+import Ferris from '../components/svg/ferris';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -51,7 +53,18 @@ const PresentationPage: React.FC = () => {
 
   return (
     <StyledMain onKeyDown={handleOnKeyDown} tabIndex={0}>
-      <article>{Conversation()}</article>
+      <article>
+        <header>
+          <Link to="/" />
+          <div>
+            <picture>
+              <Ferris />
+            </picture>
+            <p></p>
+          </div>
+        </header>
+        {Conversation()}
+      </article>
     </StyledMain>
   );
 };
