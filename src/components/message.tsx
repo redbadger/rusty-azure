@@ -101,6 +101,13 @@ const Message: React.FC<MessageProps> = ({
     setTimeout(() => setShowMessage(true), time);
   });
 
+  useEffect(() => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  });
+
   return (
     <>
       {showMessage ? (

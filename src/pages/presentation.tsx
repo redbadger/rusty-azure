@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import {
   navigateForward,
   navigateBackward,
 } from '../app/features/chat-navigation';
-import Conversation from '../components/conversation';
+import Chat from '../components/chat';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
-  article {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    border: solid 1px #eee;
-    padding: 10px;
-    margin: 0 auto;
-    justify-content: flex-end;
-    min-height: calc(100vh - (1.25rem * 2));
-  }
 `;
 
 const shouldNavigateForward = (key: string): boolean =>
@@ -42,16 +32,9 @@ const PresentationPage: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth',
-    });
-  });
-
   return (
     <StyledMain onKeyDown={handleOnKeyDown} tabIndex={0}>
-      <article>{Conversation()}</article>
+      <Chat />
     </StyledMain>
   );
 };
