@@ -1,10 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
 import chatNavigationReducer from './features/chat-navigation';
+import modalReducer from './features/modal';
 
 export const store = configureStore({
   reducer: {
     chatNavigation: chatNavigationReducer,
+    modal: modalReducer,
   },
 });
 
