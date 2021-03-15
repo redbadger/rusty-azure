@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IMessage } from '../data/script';
+import TypingIndicator from './typing-indicator';
 
 const StyledDiv = styled.div`
   border-radius: 20px;
@@ -16,6 +17,7 @@ const StyledDiv = styled.div`
   &.yours {
     margin-right: 25%;
     background-color: #eee;
+    align-self: start;
 
     &:before {
       content: '';
@@ -43,9 +45,9 @@ const StyledDiv = styled.div`
   }
 
   &.mine {
+    margin-left: 25%;
     align-self: end;
     color: white;
-    margin-left: 25%;
     background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
     background-attachment: fixed;
 
@@ -87,11 +89,28 @@ const Message: React.FC<MessageProps> = ({
   component: Component,
   id,
 }) => {
+  const [showMessage, setShowMessage] = useState(false);
+
   const bubbleType = person === 'pedro' ? 'mine' : 'yours';
+
+  useEffect(() => {
+    const {
+      props: { children: innerText },
+    } = Component();
+    const time = innerText.length * 20;
+    setTimeout(() => setShowMessage(true), time);
+  });
+
   return (
-    <StyledDiv className={bubbleType} id={`${id + 1}`}>
-      <Component />
-    </StyledDiv>
+    <>
+      {showMessage ? (
+        <StyledDiv className={bubbleType} id={`${id + 1}`}>
+          <Component />
+        </StyledDiv>
+      ) : (
+        <TypingIndicator bubbleType={bubbleType} />
+      )}
+    </>
   );
 };
 
