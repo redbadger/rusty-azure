@@ -16,10 +16,13 @@ export const modalSlice = createSlice({
     closeModal: (state) => {
       state.isOpen = false;
     },
+    openModal: (state) => {
+      state.isOpen = true;
+    },
   },
 });
 
-export const { closeModal } = modalSlice.actions;
+export const { closeModal, openModal } = modalSlice.actions;
 
 export const selectModal = (state: RootState) => state.modal;
 
