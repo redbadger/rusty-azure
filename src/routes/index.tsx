@@ -4,6 +4,7 @@ import ErrorPage from '../pages/error-page';
 import HomePage from '../pages/home';
 import PresentationPage from '../pages/presentation';
 import React from 'react';
+import AboutPage from '../pages/about';
 
 export const history = createBrowserHistory();
 
@@ -16,6 +17,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/presentation" component={PresentationPage} />
+      <Route exact path="/about" component={AboutPage} />
       <Route path="/*" component={ErrorPage} />
     </Switch>
   </CustomBrowserRouter>

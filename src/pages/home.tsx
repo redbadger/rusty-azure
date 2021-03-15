@@ -1,29 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 import Header from '../components/header';
+import Navigation from '../components/navigation';
 
 const Styles = styled.div`
   main {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-  }
-
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-
-    li:first-of-type {
-      margin-right: 1rem;
-    }
-  }
-
-  a {
-    color: black;
   }
 `;
 
@@ -37,16 +22,7 @@ const HomePage: React.FC = () => (
         How we extended the unofficial Azure SDK for Rust and now is being back
         by Microsoft
       </p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/presentation">Presentation</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navigation />
     </main>
   </Styles>
 );
