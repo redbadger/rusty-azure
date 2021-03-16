@@ -1,20 +1,21 @@
+import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
 import ReactModal from 'react-modal';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectModal, closeModal } from '../app/features/modal';
 import styled from 'styled-components';
+
+import { closeModal, selectModal } from '../app/features/modal';
 
 const StyledModalContent = styled.aside`
   position: relative;
 
   button {
     appearance: none;
-    border: unset;
     background-color: transparent;
+    border: unset;
+    display: block;
+    padding: 0;
     position: absolute;
     right: 0;
-    padding: 0;
-    display: block;
     text-decoration: underline 2px solid;
   }
 
@@ -24,11 +25,11 @@ const StyledModalContent = styled.aside`
   }
 
   ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   li {
@@ -45,14 +46,14 @@ const StyledModalContent = styled.aside`
   }
 
   kbd {
+    background-color: rgb(250, 251, 252);
+    border-radius: 6px;
+    border: 1px solid rgb(209, 213, 218);
+    box-shadow: rgb(209, 213, 218) 0px -1px 0px inset;
+    color: rgb(68, 77, 86);
     display: inline-block;
     padding: 1rem;
-    color: rgb(68, 77, 86);
     vertical-align: middle;
-    background-color: rgb(250, 251, 252);
-    border: 1px solid rgb(209, 213, 218);
-    border-radius: 6px;
-    box-shadow: rgb(209, 213, 218) 0px -1px 0px inset;
   }
 `;
 

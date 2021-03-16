@@ -1,15 +1,16 @@
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  navigateForward,
-  navigateBackward,
-  resetNavigation,
-} from '../app/features/chat-navigation';
+
+import { openModal } from '../app/features/modal';
 import { selectModal } from '../app/features/modal';
 import Chat from '../components/chat';
 import Modal from '../components/modal';
-import { openModal } from '../app/features/modal';
+import {
+  navigateBackward,
+  navigateForward,
+  resetNavigation,
+} from '../app/features/chat-navigation';
 
 const StyledMain = styled.main`
   padding: 1.25rem;

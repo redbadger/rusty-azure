@@ -1,10 +1,11 @@
-import React from 'react';
-import { hydrate, render } from 'react-dom';
-import { store } from './app/store';
-import { Provider } from 'react-redux';
-import Routes from './routes';
 import 'normalize.css';
+import { hydrate, render } from 'react-dom';
+import React from 'react';
+
 import './styles/index.scss';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import Routes from './routes';
 
 const rootElement = document.getElementById('root');
 

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+
 import { selectChatNavigation } from '../app/features/chat-navigation';
 import conversation from '../data/script';
 import Message from './message';
