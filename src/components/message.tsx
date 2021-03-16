@@ -17,7 +17,7 @@ const StyledDiv = styled.div`
   &.yours {
     margin-right: 25%;
     background-color: #eee;
-    align-self: start;
+    align-self: flex-start;
 
     &:before {
       content: '';
@@ -46,7 +46,7 @@ const StyledDiv = styled.div`
 
   &.mine {
     margin-left: 25%;
-    align-self: end;
+    align-self: flex-end;
     color: white;
     background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
     background-attachment: fixed;
