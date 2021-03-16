@@ -1,4 +1,4 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
 import chatNavigationReducer from './features/chat-navigation';
 import modalReducer from './features/modal';

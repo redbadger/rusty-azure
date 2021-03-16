@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
 import { IMessage } from '../data/script';
 import TypingIndicator from './typing-indicator';
 
 const StyledDiv = styled.div`
   border-radius: 20px;
-  padding: 8px 15px;
-  margin-top: 5px;
   margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 8px 15px;
   position: relative;
 
   p {
@@ -15,65 +16,65 @@ const StyledDiv = styled.div`
   }
 
   &.yours {
-    margin-right: 25%;
-    background-color: #eee;
     align-self: flex-start;
+    background-color: #eee;
+    margin-right: 25%;
 
     &:before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      left: -7px;
-      height: 20px;
-      width: 20px;
       background: #eee;
       border-bottom-right-radius: 15px;
+      bottom: 0;
+      content: '';
+      height: 20px;
+      left: -7px;
+      position: absolute;
+      width: 20px;
+      z-index: 0;
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      left: -10px;
-      width: 10px;
-      height: 20px;
       background: white;
       border-bottom-right-radius: 10px;
+      bottom: 0;
+      content: '';
+      height: 20px;
+      left: -10px;
+      position: absolute;
+      width: 10px;
+      z-index: 1;
     }
   }
 
   &.mine {
-    margin-left: 25%;
     align-self: flex-end;
-    color: white;
-    background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
     background-attachment: fixed;
+    background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+    color: white;
+    margin-left: 25%;
 
     &:before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      right: -8px;
-      height: 20px;
-      width: 20px;
-      background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
       background-attachment: fixed;
+      background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
       border-bottom-left-radius: 15px;
+      bottom: 0;
+      content: '';
+      height: 20px;
+      position: absolute;
+      right: -8px;
+      width: 20px;
+      z-index: 0;
     }
 
     &:after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      right: -10px;
-      width: 10px;
-      height: 20px;
       background: white;
       border-bottom-left-radius: 10px;
+      bottom: 0;
+      content: '';
+      height: 20px;
+      position: absolute;
+      right: -10px;
+      width: 10px;
+      z-index: 1;
     }
   }
 `;

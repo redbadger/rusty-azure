@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const StyledNav = styled.nav`
   ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     li:first-of-type {
       margin-right: 1rem;

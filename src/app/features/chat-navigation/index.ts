@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { RootState } from '../../store';
 import conversation from '../../../data/script';
 
