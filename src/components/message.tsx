@@ -90,15 +90,29 @@ const Message: React.FC<MessageProps> = ({
   id,
 }) => {
   const [showMessage, setShowMessage] = useState(false);
-
   const bubbleType = person === 'pedro' ? 'mine' : 'yours';
 
   useEffect(() => {
+    // Set async cleanup on compoment to prevent memory leak
+    // https://stackoverflow.com/a/60907638/4842303
+
+    let isMounted = true;
+
     const {
       props: { children: innerText },
     } = Component();
+
     const time = innerText.length * 20;
-    setTimeout(() => setShowMessage(true), time);
+
+    setTimeout(() => {
+      if (isMounted) {
+        setShowMessage(true);
+      }
+    }, time);
+
+    return () => {
+      isMounted = false;
+    };
   });
 
   useEffect(() => {
