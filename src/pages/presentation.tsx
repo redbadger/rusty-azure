@@ -36,7 +36,7 @@ const PresentationPage: React.FC = () => {
 
   useEffect(() => {
     const body = document.body;
-    body.addEventListener('keydown', (event) => {
+    body.addEventListener('keyup', (event) => {
       const { key } = event;
       if (key && !modalIsOpen) {
         if (shouldNavigateForward(key)) {
