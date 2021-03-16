@@ -1,6 +1,9 @@
 .modal {
   position: absolute;
-  inset: 25%;
+  top: 25%;
+  right: 25%;
+  bottom: 25%;
+  left: 25%;
   border: 1px solid rgb(204, 204, 204);
   background: rgb(255, 255, 255) none repeat scroll 0% 0%;
   overflow: auto;
@@ -12,6 +15,9 @@
 .overlay {
   z-index: 20;
   position: fixed;
-  inset: 0px;
   background-color: rgba(255, 255, 255, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
