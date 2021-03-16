@@ -47,10 +47,10 @@ const StyledTypingIndicator = styled.div`
   }
 
   &.yours {
-    align-self: start;
+    align-self: flex-start;
   }
   &.mine {
-    align-self: end;
+    align-self: flex-end;
   }
 `;
 
