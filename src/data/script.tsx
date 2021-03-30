@@ -146,7 +146,7 @@ const conversation: IMessage[] = [
   {
     person: 'pedro',
     component: () => (
-      <p>please, bear with, I promise I will deliver a big bang.</p>
+      <p>Please, bear with, I promise I will deliver a big bang.</p>
     ),
   },
   { person: 'audience-member', component: () => <p>... Ok.</p> },
@@ -202,9 +202,9 @@ const conversation: IMessage[] = [
     person: 'pedro',
     component: () => (
       <p>
-        Well, yes, but it’s a pain to create a SAS by scratch, so I asked a more
-        experienced developer to pair with me and we couldn’t make it. Then we
-        called our technical lead to help us…. and we had the same result.
+        Well, yes, but it’s a pain to create a SAS from scratch, so I asked a
+        more experienced developer to pair with me and we couldn’t make it. Then
+        we called our technical lead to help us… and we had the same result.
       </p>
     ),
   },
@@ -232,8 +232,8 @@ const conversation: IMessage[] = [
     person: 'pedro',
     component: () => (
       <p>
-        We found the work of Francesco Cogno, a Microsoft software developer and
-        a Rust enthusiast, that was starting with an unofficial Azure SDK for
+        We found the work of Francesco Cogno, a software developer and rust
+        enthusiast from Microsoft, that had started an unofficial Azure SDK for
         Rust and he had implemented Shared Access Signatures.
       </p>
     ),
@@ -293,7 +293,7 @@ const conversation: IMessage[] = [
       <p>
         So, we reached out to him and he was quite excited that his library was
         being used in a real project. We suggested that we could make a pull
-        request from our fork and if his team were happy, they could integrate
+        request of our fork and, if his team were happy, they could integrate
         it. They did it. We finished the project and then we forgot about it.
       </p>
     ),
@@ -320,8 +320,8 @@ const conversation: IMessage[] = [
     component: () => (
       <p>
         So, In December 2020, Microsoft Azure GitHub organisation adopted
-        Francesco’s work as part of their organisation.
-        https://github.com/Azure/azure-sdk-for-rust And now our small
+        Francesco’s work as part of their organisation:
+        https://github.com/Azure/azure-sdk-for-rust. And now our small
         contribution is part of the Microsoft Azure SDK for Rust.
       </p>
     ),
@@ -333,7 +333,7 @@ const conversation: IMessage[] = [
   },
   {
     person: 'audience-member',
-    component: () => <p>So is this talk to showing off</p>,
+    component: () => <p>So is this talk just to show off?</p>,
   },
 
   { person: 'pedro', component: () => <p>Well, yes a bit.</p> },
@@ -346,9 +346,9 @@ const conversation: IMessage[] = [
     person: 'audience-member',
     component: () => (
       <p>
-        You can say to them: that as part of your client facing work you
+        Then you could just say: "as part of your client facing work you
         contributed to a non-official open source project that was later adopted
-        by Microsoft and then you will save them 5 mins of their time.
+        by Microsoft" and then you'd save 5 mins of everyone's time.
       </p>
     ),
   },
@@ -357,8 +357,8 @@ const conversation: IMessage[] = [
     person: 'pedro',
     component: () => (
       <p>
-        Yeah, probably I would just do that. Thanks for your time, random
-        audience member
+        Yeah, I'll probably just do that. Thanks for your time, random audience
+        member.
       </p>
     ),
   },
