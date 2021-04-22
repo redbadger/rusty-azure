@@ -30,7 +30,16 @@ const AboutPage: React.FC = () => (
       <p>
         In 2020, Red Badger engaged with the UK Medicines and Healthcare
         products Regulatory Agency (MHRA) to build from scratch the medicines
-        and product portal https://products.mhra.gov.uk/.
+        and product portal{' '}
+        <a
+          href="https://products.mhra.gov.uk"
+          target="_blank"
+          rel="noreferrer"
+          className="external-link"
+        >
+          https://products.mhra.gov.uk
+        </a>
+        .
       </p>
       <p>
         The project must use Azure as a cloud provider because it is the
@@ -48,9 +57,18 @@ const AboutPage: React.FC = () => (
         probably someone had done it before, and hopefully on Rust.
       </p>
       <p>
-        We found that Francesco Cogno, a Microsoft software developer and a Rust
-        enthusiast, was starting with an not official Azure SDK for Rust and he
-        had resolved Shared Access Signatures.
+        We found that{' '}
+        <a
+          href="https://github.com/MindFlavor"
+          target="_blank"
+          rel="noreferrer"
+          className="external-link"
+        >
+          Francesco Cogno
+        </a>
+        , a Microsoft software developer and a Rust enthusiast, was starting
+        with an not official Azure SDK for Rust and he had resolved Shared
+        Access Signatures.
       </p>
       <p>
         So as many of you know, we can import dependencies in Rust just
@@ -69,9 +87,17 @@ const AboutPage: React.FC = () => (
       </p>
       <p>
         In December 2020, Microsoft Azure GitHub organisation adopted
-        Francesco’s work as part of their organisation.
-        https://github.com/Azure/azure-sdk-for-rust And now our small
-        contribution is part of Microsoft Azure SDK for Rust.
+        Francesco’s work as part of their organisation{' '}
+        <a
+          href="https://github.com/Azure/azure-sdk-for-rust"
+          target="_blank"
+          rel="noreferrer"
+          className="external-link"
+        >
+          https://github.com/Azure/azure-sdk-for-rust
+        </a>
+        . And now our small contribution is part of Microsoft Azure SDK for
+        Rust.
       </p>
 
       <Navigation />
