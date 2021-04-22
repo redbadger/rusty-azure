@@ -54,7 +54,11 @@ const StyledDiv = styled.div`
 
     &:before {
       background-attachment: fixed;
-      background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+      background: linear-gradient(
+        to bottom,
+        rgb(19, 140, 207) 0%,
+        #0085d1 100%
+      );
       border-bottom-left-radius: 15px;
       bottom: 0;
       content: '';
@@ -62,7 +66,7 @@ const StyledDiv = styled.div`
       position: absolute;
       right: -8px;
       width: 20px;
-      z-index: 0;
+      z-index: -1;
     }
 
     &:after {
@@ -74,7 +78,7 @@ const StyledDiv = styled.div`
       position: absolute;
       right: -10px;
       width: 10px;
-      z-index: 1;
+      z-index: -1;
     }
   }
 `;
