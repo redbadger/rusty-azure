@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: rgb(248, 248, 248);
+  --black: rgb(33, 33, 33);
+}
+
 body {
   font-size: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -23,7 +28,7 @@ picture {
 }
 
 a {
-  color: black;
+  color: var(--black);
   text-underline-offset: 2px;
   text-decoration-thickness: 2px;
 

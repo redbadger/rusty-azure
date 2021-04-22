@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from '../components/header';
-import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 
 const Styles = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   main {
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
+    flex: 1 auto;
   }
 
   p {
@@ -99,9 +104,8 @@ const AboutPage: React.FC = () => (
         . And now our small contribution is part of Microsoft Azure SDK for
         Rust.
       </p>
-
-      <Navigation />
     </main>
+    <Footer />
   </Styles>
 );
 
