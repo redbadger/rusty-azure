@@ -2,12 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from '../components/header';
-import Navigation from '../components/navigation';
+import Navigation from '../components/footer';
 
 const Styles = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   main {
     margin: 0 auto;
     max-width: 800px;
+    flex: 1 auto;
   }
 
   h1 {
@@ -67,9 +72,8 @@ const HomePage: React.FC = () => (
           </dd>
         </div>
       </dl>
-
-      <Navigation />
     </main>
+    <Navigation />
   </Styles>
 );
 

@@ -2,10 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StyledNav = styled.nav`
+const StyledFooter = styled.footer`
+  background-color: var(--black);
+  padding: 1.5rem 1.25rem;
+
   ul {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -16,12 +19,12 @@ const StyledNav = styled.nav`
   }
 
   a {
-    color: black;
+    color: var(--white);
   }
 `;
 
 const Navigation: React.FC = () => (
-  <StyledNav>
+  <StyledFooter>
     <ul>
       <li>
         <Link to="/presentation">Presentation</Link>
@@ -30,7 +33,7 @@ const Navigation: React.FC = () => (
         <Link to="/about">About</Link>
       </li>
     </ul>
-  </StyledNav>
+  </StyledFooter>
 );
 
 export default Navigation;
