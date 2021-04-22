@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 const StyledFooter = styled.footer`
   background-color: var(--black);
@@ -8,7 +9,6 @@ const StyledFooter = styled.footer`
 
   ul {
     display: flex;
-    /* justify-content: center; */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -23,17 +23,28 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Navigation: React.FC = () => (
-  <StyledFooter>
-    <ul>
-      <li>
-        <Link to="/presentation">Presentation</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-    </ul>
-  </StyledFooter>
-);
+const Navigation: React.FC = () => {
+  const [isHome, setIsHome] = useState(true);
+  const {
+    location: { pathname },
+  } = useHistory();
+
+  useEffect(() => {
+    pathname === '/about' ? setIsHome(false) : setIsHome(true);
+  }, [isHome, pathname]);
+
+  return (
+    <StyledFooter>
+      <ul>
+        <li>
+          {isHome ? <Link to="/about">About</Link> : <Link to="/">Home</Link>}
+        </li>
+        <li>
+          <Link to="/presentation">Presentation</Link>
+        </li>
+      </ul>
+    </StyledFooter>
+  );
+};
 
 export default Navigation;
