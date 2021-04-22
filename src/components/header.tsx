@@ -9,6 +9,11 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 1.25rem;
+
+  a {
+    display: block;
+  }
+
   picture {
     &:first-of-type {
       max-width: 200px;
@@ -21,12 +26,20 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader>
-    <picture>
-      <Sally />
-    </picture>
-    <picture>
-      <RustLondon />
-    </picture>
+    <a href="https://red-badger.com/" target="_blank" rel="noreferrer">
+      <picture>
+        <Sally />
+      </picture>
+    </a>
+    <a
+      href="https://www.meetup.com/Rust-London-User-Group/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <picture>
+        <RustLondon />
+      </picture>
+    </a>
   </StyledHeader>
 );
 

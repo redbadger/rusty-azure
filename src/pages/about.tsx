@@ -20,10 +20,6 @@ const Styles = styled.div`
     max-width: 120ch;
     text-align: start;
   }
-
-  a {
-    color: black;
-  }
 `;
 
 const AboutPage: React.FC = () => (
