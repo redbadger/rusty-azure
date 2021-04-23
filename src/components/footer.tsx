@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
   } = useHistory();
 
   useEffect(() => {
-    pathname === '/about' ? setIsHome(false) : setIsHome(true);
+    setIsHome(pathname === '/');
   }, [isHome, pathname]);
 
   return (
