@@ -64,8 +64,7 @@ const Modal: React.FC = () => {
   const { isOpen } = useSelector(selectModal);
   const dispatch = useDispatch();
 
-  const handleOnClick = (event: React.MouseEvent) => {
-    event.preventDefault();
+  const handleOnClick = (_event: React.MouseEvent) => {
     dispatch(closeModal());
   };
 
@@ -79,6 +78,8 @@ const Modal: React.FC = () => {
       className="modal"
       overlayClassName="overlay"
       onRequestClose={handleOnClick}
+      shouldCloseOnOverlayClick={true}
+      shouldCloseOnEsc={true}
     >
       <StyledModalContent>
         <button onClick={handleOnClick}>close</button>
