@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
 
-import { closeModal, selectModal } from '../app/features/modal';
+import { closeModal, openModal, selectModal } from '../app/features/modal';
 
 const StyledModalContent = styled.aside`
   position: relative;
@@ -68,6 +68,10 @@ const Modal: React.FC = () => {
     event.preventDefault();
     dispatch(closeModal());
   };
+
+  useEffect(() => {
+    dispatch(openModal());
+  }, [dispatch]);
 
   return (
     <ReactModal isOpen={isOpen} className="modal" overlayClassName="overlay">
