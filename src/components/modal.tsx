@@ -79,6 +79,8 @@ const Modal: React.FC = () => {
       className="modal"
       overlayClassName="overlay"
       onRequestClose={handleOnClick}
+      shouldCloseOnOverlayClick={true}
+      shouldCloseOnEsc={true}
     >
       <StyledModalContent>
         <button onClick={handleOnClick}>close</button>
