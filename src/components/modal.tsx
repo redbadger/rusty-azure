@@ -17,6 +17,7 @@ const StyledModalContent = styled.aside`
     position: absolute;
     right: 0;
     text-decoration: underline 2px solid;
+    cursor: pointer;
   }
 
   h1 {
