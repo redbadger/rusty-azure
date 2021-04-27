@@ -74,7 +74,12 @@ const Modal: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <ReactModal isOpen={isOpen} className="modal" overlayClassName="overlay">
+    <ReactModal
+      isOpen={isOpen}
+      className="modal"
+      overlayClassName="overlay"
+      onRequestClose={handleOnClick}
+    >
       <StyledModalContent>
         <button onClick={handleOnClick}>close</button>
         <h1>Navigation</h1>
